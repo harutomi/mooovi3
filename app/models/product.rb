@@ -3,4 +3,3 @@ class Product < ActiveRecord::Base
   def review_average
     self.reviews.average(:rate).round
   end
-end
