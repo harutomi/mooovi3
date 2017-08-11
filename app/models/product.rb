@@ -1,2 +1,5 @@
 class Product < ActiveRecord::Base
-end
+  has_many :reviews
+  def review_average
+    self.reviews.average(:rate).round
+  end
